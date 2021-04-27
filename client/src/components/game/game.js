@@ -130,13 +130,7 @@ class game extends Component {
         }
         return null;
     }
-    selectX = () => {
-        this.setState({ notChoosen: false })
-    }
 
-    selectO = () => {
-        this.setState({ notChoosen: false, computer: true, flopped: true });
-    }
 
     handleClick = (e) => {
         if (this.state.notChoosen || this.state.computer) return;
@@ -148,6 +142,13 @@ class game extends Component {
         this.setState({ board: newBoard, computer: true });
     }
 
+    selectX = () => {
+        this.setState({ notChoosen: false })
+    }
+
+    selectO = () => {
+        this.setState({ notChoosen: false, computer: true, flopped: true });
+    }
     reset = () => {
         displayScore = [];
         this.setState({
