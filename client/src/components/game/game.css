@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+  flex-flow: row no-wrap;
+  align-items: flex-start;
+}
+.reset {
+  font: 4em Courier;
+  text-align: center;
+margin-left: 45rem;
+margin-bottom: 2rem;
+}
+.game {
+  width: 100%;
+}
+.under {
+  text-align: center;
+margin-top: 2rem;
+  margin-left: 45rem;
+}
+.button{
+  border: none;
+  padding: .5rem 4rem .5rem 4rem;
+  margin: 1rem;
+cursor: pointer;
+  background-color: grey;
+  color: whitesmoke;
+  font: 1rem Courier;
+  border-radius: 6px;
+}
+button:hover{
+background-color: black;
+color: white;
+}
+
+.x, .continue {
+  background-color: #8DB600
+}
+.o {
+  background-color: #89CFF0
+}
