@@ -32,7 +32,7 @@ class game extends Component {
         setTimeout(() => {
             const winner = this.findWinner(this.state.board);
             if (winner !== null) {
-                const winnerMessage = winner === 1 ? "You won" : winner === 0 ? "You lost" : "Tie";
+                const winnerMessage = winner === 1 ? "You Won" : winner === 0 ? "You Lost" : "Tie";
 
                 if (!this.state.over) {
                     displayScore.push(winnerMessage);
@@ -191,7 +191,7 @@ class game extends Component {
                 </div>
                 <div className="game">
                     <div className="reset">
-                        <button className="button" onClick={this.reset}>reset</button>
+                        <button className="button" onClick={this.reset}>Reset</button>
                         <button className="button continue" onClick={this.continue}>Continue</button>
                     </div>
                     <TicTakToe

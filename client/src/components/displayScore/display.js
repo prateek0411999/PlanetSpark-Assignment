@@ -20,13 +20,14 @@ const Display = (props) => {
     const classes = useStyles();
 
     return (
+
         <TableContainer component={Paper}>
             <Table className={classes.table} aria-label="simple table">
                 <TableHead>
                     <TableRow>
                         <TableCell>Tic Tac Toe Games</TableCell>
-                        <TableCell align="right">You </TableCell>
-                        <TableCell align="right">Computer</TableCell>
+                        <TableCell align="right">Your Score</TableCell>
+                        <TableCell align="right">Computer Score</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -35,11 +36,15 @@ const Display = (props) => {
                             <TableCell component="th" scope="row">
                                 Game {idx + 1}
                             </TableCell>
-                            <TableCell align="right">{row === "You won" ? 1 : row === "You lost" ? 0 : 0}</TableCell>
-                            <TableCell align="right">{row === "You won" ? 0 : row === "You lost" ? 1 : 0}</TableCell>
+                            <TableCell align="right">{row === "You Won" ? 1 : row === "You Lost" ? 0 : 0}</TableCell>
+                            <TableCell align="right">{row === "You Won" ? 0 : row === "You Lost" ? 1 : 0}</TableCell>
 
                         </TableRow>
-                    )) : <TableRow><TableCell>No Games Played Yet</TableCell></TableRow>}
+                    )) :
+                        <TableRow>
+                            <TableCell>No Games Played Yet</TableCell>
+                        </TableRow>
+                    }
                 </TableBody>
             </Table>
         </TableContainer>
