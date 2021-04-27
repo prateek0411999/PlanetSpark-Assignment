@@ -6,7 +6,7 @@
 .reset {
   font: 4em Courier;
   text-align: center;
-margin-left: 45rem;
+margin-left: 18rem;
 margin-bottom: 2rem;
 }
 .game {
@@ -15,7 +15,7 @@ margin-bottom: 2rem;
 .under {
   text-align: center;
 margin-top: 2rem;
-  margin-left: 45rem;
+  margin-left: 18rem;
 }
 .button{
   border: none;
@@ -37,4 +37,8 @@ color: white;
 }
 .o {
   background-color: #89CFF0
+}
+.display{
+margin-top: 4rem;
+margin-left: 2rem;
 }

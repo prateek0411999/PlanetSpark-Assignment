@@ -89,10 +89,11 @@ class game extends Component {
         // if (_.isNull(board) === null) {
         //     return "nothing"
         // }
-        let vals = [true, false];
-        var allNotNull = true;
-        for (var k = 0; k < vals.length; k++) {
-            var value = vals[k];
+        let allNotNull = true;
+        let val = [true, false];
+
+        for (var k = 0; k < val.length; k++) {
+            var value = val[k];
 
             var diagonal1 = true;
             var diagonal2 = true;
@@ -129,6 +130,14 @@ class game extends Component {
         }
         return null;
     }
+    selectX = () => {
+        this.setState({ notChoosen: false })
+    }
+
+    selectO = () => {
+        this.setState({ notChoosen: false, computer: true, flopped: true });
+    }
+
     handleClick = (e) => {
         if (this.state.notChoosen || this.state.computer) return;
 
@@ -171,18 +180,15 @@ class game extends Component {
             continue: true
         });
     }
-    selectX = () => {
-        this.setState({ notChoosen: false })
-    }
-    selectY = () => {
-        this.setState({ notChoosen: false, computer: true, flopped: true });
-    }
+
     render() {
         return (
             <div className="wrapper">
-                {console.log('checking scores', this.state.score)}
-                <DisplayScore
-                    score={this.state.score} />
+                <div className="display">
+                    <DisplayScore
+                        score={this.state.score}
+                    />
+                </div>
                 <div className="game">
                     <div className="reset">
                         <button className="button" onClick={this.reset}>reset</button>
@@ -202,7 +208,7 @@ class game extends Component {
                         {this.state.notChoosen &&
                             <div>
                                 <button className="button x" onClick={this.selectX}>X</button>
-                                <button className="button o" onClick={this.selectY}>O</button>
+                                <button className="button o" onClick={this.selectO}>O</button>
                             </div>
                         }
                     </div>
